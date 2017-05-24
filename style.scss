@@ -1,0 +1,144 @@
+$bColor:#440CE8;
+$white: #FFFFFF;
+$yellow: #FFE900;
+
+#navBar {
+  background-color: $bColor;
+  margin:{
+   left: -15px;
+   right: -15px;
+  }
+  #brand {
+    color: $white;
+    font-size: 22px;
+  }
+  #toggleB{
+    background-color: $yellow; 
+  }
+  #about{
+    color: $white;
+  }
+  #portfolio {
+    color: $white;
+    }
+  #contact {
+    color: $white;
+    }
+}
+%fontSize {
+ h3 {
+    margin: {
+      top: 15px;
+      bottom: 10px;
+    }
+    font-size: 24px;
+  }
+  h4 {
+    margin:{
+     top: 15px;
+     bottom : 10px;
+    }
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  } 
+}
+#aSection {
+  @extend %fontSize;
+  margin: {
+    left: 20%;
+    right: 20%
+  }
+  img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: right;
+  }
+  p {
+    font-size: 16px;
+    text-align: justify;
+  }
+  #aP {
+    margin-bottom: 20px;
+  }
+}
+
+#pSection {
+  @extend%fontSize;;
+  margin: {
+    left: 0;
+    right: 0;
+    top: 20px;
+  }
+ img {
+  width: 240px;
+  height: 240px;
+  border: 2px solid $yellow;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+  .firstList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .secondList {
+    @extend .firstList;
+  }
+  .thirdList {
+    @entend .thirdList;
+  }
+}
+
+.contactMeSec {
+  @extend %fontSize;
+  h4{
+    font-size: 18px;
+  }
+  button {
+    margin-top: 20px;
+    background-color: $bColor;
+    i{
+      color: $yellow
+    }
+  }
+  p {
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
+    color: #000080;
+    background-color: rgba(152,251, 152, 0.8);
+  }
+}
+
+.footerSec {
+  margin-top: 20px;
+  padding-top: 8px;
+  text-align: center;
+  margin:{
+  left: -15px;
+  right: -15px;
+  }
+  height: 35px;
+  background-color: $bColor;
+  .icons{
+    i {
+    color: $yellow;
+    font-size: 18px;
+    }
+    float: right;
+  }
+  span {
+    color : $white;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #brand {
+    font-size: 20px;
+  }
+}
